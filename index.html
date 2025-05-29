@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Integração RD Station</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulário RD Station Marketing</h1>
+  <form id="rdForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="funcionarios">Número de Funcionários:</label>
+    <input type="number" id="funcionarios" name="funcionarios" required>
+
+    <!-- Campo hidden para categoria -->
+    <input type="hidden" id="categoria" name="category" value="communications">
+    
+    <!-- Seleção para a base legal -->
+    <label for="baselegal">Base Legal:</label>
+    <select id="baselegal" name="baselegal" required>
+       <option value="consent">Consentimento (consent)</option>
+       <option value="legitimate_interest">Legítimo Interesse (legitimate_interest)</option>
+       <option value="pre_existent_contract">Contrato Preexistente (pre_existent_contract)</option>
+       <option value="judicial_process">Obrigação Legal/Proteção do Crédito/Processo Judicial (judicial_process)</option>
+       <option value="public_interest">Execução de Políticas Públicas (public_interest)</option>
+       <option value="vital_interest">Proteção da Vida/Tutela da Saúde (vital_interest)</option>
+    </select>
+    
+    <!-- Seleção para o status -->
+    <label for="status">Status do Consentimento:</label>
+    <select id="status" name="status" required>
+      <option value="granted">Granted</option>
+      <option value="declined">Declined</option>
+    </select>
+    
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <script src="script.js"></script>
+</body>
+</html>
